@@ -65,7 +65,7 @@ The algorithm is as follows:
 5. Return the optimal policy and the optimal value function.
 
 ## VALUE ITERATION FUNCTION
-python
+```python
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
     while True:
@@ -79,7 +79,7 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
       V=np.max(Q,axis=1)
     pi=lambda s:{s:a for s , a in enumerate(np.argmax(Q,axis=1))}[s]
     return V, pi
-
+```
 
 ## OUTPUT:
 Mention the optimal policy, optimal value function , success rate for the optimal policy.
